@@ -10,23 +10,21 @@ class Categories extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 244, 239, 241),
       appBar: AppBar(
-        title: const Text(
+        title:  Text(
           'All Categories',
           style: TextStyle(color: Color.fromARGB(255, 17, 16, 17)),
         ),
-        actions: const [
+        actions:  [
           Icon(Icons.search, size: 30, color: Color.fromARGB(255, 21, 21, 21)),
         ],
         backgroundColor: const Color.fromARGB(255, 227, 20, 127),
-      ),
-
-      
+      ), 
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding:  EdgeInsets.all(10),
         child: GridView.count(
           crossAxisCount: 3,
-          mainAxisSpacing: 50,
-          crossAxisSpacing: 30,
+          mainAxisSpacing: 25,
+          crossAxisSpacing: 25,
           children: [
             circleContainer(images: Images.Tops, text: 'Tops'),
             circleContainer(images: Images.Bags, text: 'Bags'),
@@ -43,18 +41,12 @@ class Categories extends StatelessWidget {
             circleContainer(images: Images.Home, text: 'Home'),
 
             circleContainer(images: Images.Makeup, text: 'MakeUp'),
-            circleContainer(images: Images.Earing, text: 'Earings'),
-
-          
+            circleContainer(images: Images.Earing, text: 'Earings'),         
           ],
         ),
       ),
     );
   }
-
-
-
- 
   Widget circleContainer({
     required String images,
     required String text,
@@ -65,11 +57,11 @@ class Categories extends StatelessWidget {
           backgroundImage: NetworkImage(images),
           radius: 40,
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 15),
         Text(
           text,
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style:  TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 12,
           ),
