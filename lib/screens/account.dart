@@ -52,31 +52,26 @@ class MyAccount extends StatelessWidget {
                 ),
               ),
 
-               Gap(20),
-               ThickLine(),
+              Gap(20),
+              ThickLine(),
 
-               PaymentOption(
-                icon: Icons.credit_card,
-                title: 'PAYMENT METHODS',
-              ),
+              PaymentOption(icon: Icons.credit_card, title: 'PAYMENT METHODS'),
 
-               Gap(20),
-               ThickLine(),
+              Gap(20),
+              ThickLine(),
 
-               OptionLists(icon: Icons.reviews, text: 'Reviews'),
-               OptionLists(icon: Icons.help, text: 'FAQs'),
+              OptionLists(icon: Icons.reviews, text: 'Reviews'),
+              OptionLists(icon: Icons.help, text: 'FAQs'),
 
-               Gap(20),
+              Gap(20),
 
               Padding(
-                padding:  EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text(
+                  child: Text(
                     'Logout',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 243, 33, 163),
-                    ),
+                    style: TextStyle(color: Color.fromARGB(255, 243, 33, 163)),
                   ),
                 ),
               ),

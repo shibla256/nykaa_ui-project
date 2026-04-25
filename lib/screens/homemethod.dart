@@ -16,13 +16,13 @@ class OfferProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding:  EdgeInsets.symmetric(horizontal: 8),
       child: Container(
         height: 150,
         width: 130,
         decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: const [
+          boxShadow:  [
             BoxShadow(
               offset: Offset(1, 1),
               blurRadius: 6,
@@ -34,7 +34,7 @@ class OfferProduct extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.all(6),
+              margin:  EdgeInsets.all(6),
               width: double.infinity,
               height: 80,
               child: ClipRRect(
@@ -43,18 +43,18 @@ class OfferProduct extends StatelessWidget {
                   images,
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) =>
-                      const Icon(Icons.error),
+                       Icon(Icons.error),
                 ),
               ),
             ),
-            const Gap(5),
+             Gap(5),
             Text(
               text,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              style:  TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
             ),
             Text(
               price,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+              style:  TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
             ),
           ],
         ),
@@ -78,8 +78,8 @@ class OfferColumn extends StatelessWidget {
           backgroundImage: NetworkImage(images),
           onBackgroundImageError: (_, _) {},
         ),
-        const SizedBox(height: 6),
-        Text(text, style: const TextStyle(fontWeight: FontWeight.w500)),
+         SizedBox(height: 6),
+        Text(text, style:  TextStyle(fontWeight: FontWeight.w500)),
       ],
     );
   }
@@ -104,8 +104,8 @@ class TopContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      margin:  EdgeInsets.all(10),
+      padding:  EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: containerColor,
@@ -119,9 +119,9 @@ class TopContainer extends StatelessWidget {
             height: height,
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) =>
-                const Icon(Icons.error),
+                 Icon(Icons.error),
           ),
-          const Gap(10),
+           Gap(10),
           Expanded(
             child: Text(
               text,
@@ -146,7 +146,7 @@ class RecentlyBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+      margin:  EdgeInsets.symmetric(vertical: 20, horizontal: 5),
       width: 180,
       height: 200,
       child: ClipRRect(
@@ -154,7 +154,7 @@ class RecentlyBox extends StatelessWidget {
         child: Image.network(
           images,
           fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) => const Icon(Icons.error),
+          errorBuilder: (context, error, stackTrace) =>  Icon(Icons.error),
         ),
       ),
     );
@@ -169,7 +169,7 @@ class Ads extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(5),
+      margin:  EdgeInsets.all(5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         image: DecorationImage(image: NetworkImage(images), fit: BoxFit.cover),
@@ -192,7 +192,7 @@ class ContainerTop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      margin: const EdgeInsets.all(5),
+      margin:  EdgeInsets.all(5),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(5),
@@ -201,10 +201,10 @@ class ContainerTop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(icon, color: Colors.black),
-          const Gap(10),
+           Gap(10),
           Text(
             text,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style:  TextStyle(fontWeight: FontWeight.bold),
           ),
         ],
       ),
@@ -240,20 +240,20 @@ class PaymentOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding:  EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
               Icon(icon, color: Colors.black),
-              const SizedBox(width: 15),
+               SizedBox(width: 15),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
+                    style:  TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
@@ -261,7 +261,7 @@ class PaymentOption extends StatelessWidget {
                   if (subtitle != null)
                     Text(
                       subtitle!,
-                      style: const TextStyle(
+                      style:  TextStyle(
                         color: Color.fromARGB(255, 65, 23, 23),
                         fontSize: 13,
                       ),
@@ -270,7 +270,7 @@ class PaymentOption extends StatelessWidget {
               ),
             ],
           ),
-          const Icon(Icons.arrow_forward_ios, size: 16),
+           Icon(Icons.arrow_forward_ios, size: 16),
         ],
       ),
     );
@@ -292,9 +292,9 @@ class OptionLists extends StatelessWidget {
       leading: Icon(icon, color: Colors.black),
       title: Text(
         text,
-        style: const TextStyle(fontWeight: FontWeight.bold),
+        style:  TextStyle(fontWeight: FontWeight.bold),
       ),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+      trailing:  Icon(Icons.arrow_forward_ios, size: 16),
     );
   }
 }

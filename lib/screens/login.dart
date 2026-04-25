@@ -17,14 +17,14 @@ class _LoginPageState extends State<LoginPage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text("Error"),
+        title:  Text("Error"),
         content: Text(message),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text("OK"),
+            child:  Text("OK"),
           ),
         ],
       ),
@@ -50,14 +50,14 @@ class _LoginPageState extends State<LoginPage> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text("Error"),
-          content: const Text("Please enter email or  password"),
+          title:  Text("Error"),
+          content:  Text("Please enter email or  password"),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text("OK"),
+              child:  Text("OK"),
             ),
           ],
         ),
@@ -65,11 +65,10 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const BottomNav()),
+        MaterialPageRoute(builder: (_) =>  BottomNav()),
       );
     }
   }
-
   @override
   void dispose() {
     usernameController.dispose();
@@ -77,24 +76,21 @@ class _LoginPageState extends State<LoginPage> {
     passwordController.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 251, 182, 220),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding:  EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               SizedBox(height: 240),
-
               Image.network(
                 'https://cdn.iconscout.com/icon/free/png-256/free-nykaa-logo-icon-svg-download-png-2822953.png',
                 height: 150,
                 width: 400,
               ),
-
               SizedBox(height: 20),
 
               Card(
@@ -103,12 +99,12 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 elevation: 10,
                 child: Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding:  EdgeInsets.all(20),
                   child: Column(
                     children: [
                       TextField(
                         controller: usernameController,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           labelText: 'Username',
                           prefixIcon: Icon(Icons.person_outline),
                           border: OutlineInputBorder(),
@@ -119,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
 
                       TextField(
                         controller: emailController,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           labelText: 'Email',
                           prefixIcon: Icon(Icons.email_outlined),
                           border: OutlineInputBorder(),
@@ -131,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
                       TextField(
                         controller: passwordController,
                         obscureText: true,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           labelText: 'Password',
                           prefixIcon: Icon(Icons.lock_outline),
                           border: OutlineInputBorder(),
@@ -145,26 +141,19 @@ class _LoginPageState extends State<LoginPage> {
                         child: ElevatedButton(
                           onPressed: login,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(
-                              255,
-                              170,
-                              15,
-                              93,
-                            ),
-                            padding: const EdgeInsets.symmetric(vertical: 14),
+                            backgroundColor: const Color.fromARGB(   255,  170,   15,  93,),
+                            padding:  EdgeInsets.symmetric(vertical: 14),
                           ),
-                          child: const Text(
+                          child:  Text(
                             "Login",
                             style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ),
                       ),
-
                       SizedBox(height: 10),
-
                       TextButton(
                         onPressed: () {},
-                        child: const Text(" Login Or Signup?"),
+                        child:  Text(" Login Or Signup?"),
                       ),
                     ],
                   ),

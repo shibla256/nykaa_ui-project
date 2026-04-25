@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:week4/screens/splash.dart';
 
-
-
 void main(){
   runApp(MyApp());
 }

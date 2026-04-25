@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:week4/screens/homemethod.dart';
 import 'package:week4/screens/images.dart';
@@ -9,7 +8,6 @@ class Recent extends StatefulWidget {
   @override
   State<Recent> createState() => _MyWidgetState();
 }
-
 class _MyWidgetState extends State<Recent> {
   final List<String> items = [
     GroceryImages.dress,
@@ -25,7 +23,6 @@ class _MyWidgetState extends State<Recent> {
         backgroundColor: const Color.fromARGB(255, 253, 251, 252),
         title:  Text('Recent'),
       ),
-
       body: GridView.builder(
         padding:  EdgeInsets.all(10),
         itemCount: items.length,

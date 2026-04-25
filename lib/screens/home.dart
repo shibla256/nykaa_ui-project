@@ -107,7 +107,7 @@ class Homepage extends StatelessWidget {
   child: ListView(
     scrollDirection: Axis.horizontal,
     physics: BouncingScrollPhysics(),
-    children: const [
+    children:  [
       RecentlyBox(
         images:
             'https://m.media-amazon.com/images/I/8156ueDYjIL._AC_UY1000_.jpg',
