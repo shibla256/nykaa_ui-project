@@ -7,24 +7,26 @@ class MyAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final items = [
+      {'icon': Icons.shopping_cart, 'text': 'Orders'},
+      {'icon': Icons.favorite, 'text': 'Wishlist'},
+    ];
+
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 216, 42, 112),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Header
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                   children: [
                     Text(
                       'Hey! Nykaa Users',
-
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ),
@@ -33,51 +35,51 @@ class MyAccount extends StatelessWidget {
                 ),
               ),
 
-              Divider(),
-
-              // Quick Actions
-              Row(
-                children: [
-                  Expanded(
-                    child: Containertop(
-                      icon: Icons.shopping_cart,
-                      text: 'Orders',
-                    ),
-                  ),
-                  Expanded(
-                    child: Containertop(icon: Icons.favorite, text: 'Wishlist'),
-                  ),
-                ],
-              ),
-
-              Gap(20),
-              thickLine(),
-
-              // Credit
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Credit Options',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
+              SizedBox(
+                height: 60,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width / 2,
+                      child: ContainerTop(
+                        icon: items[index]['icon'] as IconData,
+                        text: items[index]['text'] as String,
+                      ),
+                    );
+                  },
                 ),
               ),
 
-              paymentOption(icon: Icons.credit_card, title: 'PAYMENT METHODS'),
+               Gap(20),
+               ThickLine(),
 
-              Gap(20),
-              thickLine(),
+               PaymentOption(
+                icon: Icons.credit_card,
+                title: 'PAYMENT METHODS',
+              ),
 
-              // Activity
-              optionLists(icon: Icons.reviews, text: 'Reviews'),
-              optionLists(icon: Icons.help, text: 'FAQs'),
+               Gap(20),
+               ThickLine(),
 
-              Gap(20),
+               OptionLists(icon: Icons.reviews, text: 'Reviews'),
+               OptionLists(icon: Icons.help, text: 'FAQs'),
 
-              // Logout
-              ElevatedButton(onPressed: () {}, child: const Text('Logout')),
+               Gap(20),
+
+              Padding(
+                padding:  EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Logout',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 243, 33, 163),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

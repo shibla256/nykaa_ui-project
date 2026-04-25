@@ -17,7 +17,7 @@ class Categories extends StatelessWidget {
         actions:  [
           Icon(Icons.search, size: 30, color: Color.fromARGB(255, 21, 21, 21)),
         ],
-        backgroundColor: const Color.fromARGB(255, 227, 20, 127),
+        backgroundColor: const Color.fromARGB(255, 231, 138, 175),
       ), 
       body: Padding(
         padding:  EdgeInsets.all(10),

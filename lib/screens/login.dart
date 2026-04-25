@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:week4/screens/bottomnav.dart';
 
@@ -88,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-               SizedBox(height: 240),
+              SizedBox(height: 240),
 
               Image.network(
                 'https://cdn.iconscout.com/icon/free/png-256/free-nykaa-logo-icon-svg-download-png-2822953.png',
@@ -96,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: 400,
               ),
 
-               SizedBox(height: 20),
+              SizedBox(height: 20),
 
               Card(
                 shape: RoundedRectangleBorder(
@@ -107,7 +106,6 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                     
                       TextField(
                         controller: usernameController,
                         decoration: const InputDecoration(
@@ -117,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
 
-                   SizedBox(height: 20),
+                      SizedBox(height: 20),
 
                       TextField(
                         controller: emailController,
@@ -128,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
 
-                       SizedBox(height: 20),
+                      SizedBox(height: 20),
 
                       TextField(
                         controller: passwordController,
@@ -140,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
 
-                 SizedBox(height: 25),
+                      SizedBox(height: 25),
 
                       SizedBox(
                         width: double.infinity,

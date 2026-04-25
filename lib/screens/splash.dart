@@ -36,8 +36,6 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.network(
                 'https://vectorseek.com/wp-content/uploads/2023/04/Nykaa-Logo-Vector.jpg',
 
-
-              
               ),
             ),
           ),
